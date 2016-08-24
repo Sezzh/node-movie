@@ -1,0 +1,24 @@
+version: '2'
+services:
+  db:
+    image: postgres:9.5.4
+    environment:
+      - POSTGRES_PASSWORD=tifis
+      - PGDATA=/var/lib/postgresql/data
+    volumes:
+      - ./sql:/sql
+    volumes_from:
+      - data
+    ports:
+      - "5432:5432"
+  data:
+    image: ubuntu
+    command: /bin/bash -l
+    volumes:
+      - psdata:/var/lib/postgresql/data
+  nodeapp:
+    build:
+      context: .
+volumes:
+    psdata:
+      external: true

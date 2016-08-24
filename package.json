@@ -1,0 +1,14 @@
+{
+  "name": "movies",
+  "version": "1.0.0",
+  "description": "A simple CRUD app for indexes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jesus and ricardo",
+  "license": "MIT",
+  "dependencies": {
+    "pg": "^6.1.0"
+  }
+}
