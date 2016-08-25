@@ -10,7 +10,7 @@ services:
     volumes_from:
       - data
     ports:
-      - "5432:5432"
+      - "4444:5432"
   data:
     image: ubuntu
     command: /bin/bash -l
