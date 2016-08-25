@@ -16,9 +16,6 @@ services:
     command: /bin/bash -l
     volumes:
       - psdata:/var/lib/postgresql/data
-  nodeapp:
-    build:
-      context: .
 volumes:
     psdata:
       external: true
